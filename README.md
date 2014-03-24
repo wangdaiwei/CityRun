@@ -1,4 +1,4 @@
-webgl
+CityRun
 =====
 
-Testing WebGL with three.js.
+A WebGL game based on three.js.
