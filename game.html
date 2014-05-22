@@ -6,13 +6,6 @@
 			body {
 				background-color: black;
 			}
-			#gameCanvas {
-				background-color: black;
-				width: 640px;
-				height: 360px;
-				margin: auto;
-				align: center;
-			}
 			#scoreboard {
 				text-align: center;
 				font-family: Segoe UI, Helvetica, Ubuntu, sans-serif;
@@ -28,26 +21,29 @@
 				background-color: white;
 				color: black;
 			}
+			#gameCanvas {
+				background-color: black;
+				width: window.innerWidth;
+				height: 500px;
+				margin: auto;
+				align: center;
+			}
 		</style>
 	</head>
 	<body onload='setup();'>
+		<div id='scoreboard'>
+			<!-- <h1 id='scores'>0-0</h1> -->
+			<h1 id='title'>City Run</h1>
+			<!-- <h2 id='winnerBoard'>First to 7 wins!</h2> -->
+			<h3>W, S, A, D - move forward, backward, left, right</h3>
+		</div>
 		<div id='gameCanvas'></div>
-		<script src='./game.js'></script>
-
+		<script src='js/libs/three.min.js'></script>
+		<script src='js/Car.js'></script>
 		<script src="js/controls/OrbitControls.js"></script>
 		<script src='js/controls/keyboard.js'></script>
+		<script src='./game.js'></script>
 
 		<script src="js/Detector.js"></script>
-		<script src="js/libs/stats.js"></script>
-
-		<script src='js/libs/three.min.js'></script>
-
-		<div id='scoreboard'>
-			<h1 id='scores'>0-0</h1>
-			<h1 id='title'>City Run</h1>
-			<h2 id='winnerBoard'>First to 7 wins!</h2>
-			<h3>A - move left
-			<br>D - move right</h3>
-		</div>
 	</body>
 </html>
